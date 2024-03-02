@@ -1,0 +1,319 @@
+.slideshowContainer {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0 15px;
+    width: 100%;
+    height: 500px;
+    z-index: 10;
+  }
+  
+  .imageSlides {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+    margin-bottom: 0;
+
+  }
+  
+  /* add 'visible' class via Javascript */
+  .visible {
+    opacity: 1;
+  }
+  
+  .slideshowArrow {
+    font-size: 7em;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .slideshowArrow:hover {
+    opacity: 0.75;
+  }
+  
+  #leftArrow {
+    position: absolute;
+    left: 40%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #rightArrow {
+    position: absolute;
+    right: 40%;
+    top: 90%;
+    transform: translate(50%, -50%);
+    z-index:11;
+  }
+  
+  .slideshowCircles {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .circle {
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid 2px rgba(255, 255, 255, 0.5);
+    transition: 1s ease-in-out;
+  }
+  
+  .dot {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: solid 2px rgba(255, 255, 255, 0.5);
+  }
+
+  *{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* header{
+    background: linear-gradient(90deg, rgba(8,8,8,0.9) 10%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.9) 92%);
+    position:slider
+}
+
+header span{
+    color:red
+}
+
+header .logo{
+    color: #fff;
+    margin: 0;
+    padding: 20px 30px;
+    font-weight: bold;
+    font-size: 1.7em;
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+header a{
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color:white
+
+}
+
+header a:hover{
+    color: red;
+} */
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: black;
+    color:white;
+}
+
+#contacto ul{
+    margin-left: 0%;
+}
+
+#contacto .contact-footer{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: block;
+}
+
+#contacto li{
+    padding: 10px;
+    justify-content: center;
+}
+
+#contacto span{
+    position: relative;
+    bottom: 9px;
+margin: 10px;
+width: auto;
+color: #FFF;
+
+
+}
+
+#contacto li img{
+    transform: translate(-140%, 0%);
+}
+
+#contacto img{
+
+    width: 30px;
+    filter: invert(1);
+}
+
+#contacto a{
+        text-decoration: none;
+        color: black;
+        margin: 5px 5px;
+       
+    }
+
+
+#tipo1 .casa{
+display: flex;
+align-items: center;
+text-align: center;
+flex-direction: column;
+height: 160vh;
+color: white;
+background: black;
+position:relative;
+margin-bottom: 0;
+width:100%;
+}
+
+#tipo1 h1{
+    margin-top: 100px;
+    position: relative
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem
+}
+
+#tipo1 p{
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+
+@media (min-width: 700px)
+    {
+        .header{
+            align-items: center;
+            padding: 14px 3%; 
+            width:100%;
+            position:fixed;
+            z-index:2;
+    
+        }
+        #contacto{
+            z-index:11
+        }
+    
+        .logo
+        {
+            justify-content:center;
+            font-size: 25px
+        }
+    
+        .nav
+        {
+            margin-top:10px;
+            max-height: none;
+            top: 0;
+            right:0;
+            background-color: transparent;
+            width:fit-content;
+            align-items:center;
+    
+    
+        }
+    
+        .menu a{
+            padding: 10px;
+            align-items:center;
+        }
+    
+        .nav .menu ul{
+            align-items:center;
+        }
+    .nav .menu li{
+        display: inline-block;
+        justify-content: flex-end;
+        align-items:center;
+    }
+    
+    
+        .menu a:hover
+        {
+            background-color: transparent;
+            color: red
+        }
+    
+        .hamb
+        {
+            display: none;
+        }
+    }
+
+    /* header{
+        position: fixed;
+        width: 100%;
+        z-index: 11;
+    }
+    
+        header .container{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    
+        header nav{
+            flex-direction: row;
+            padding-bottom: 0;
+            padding-right: 20px;
+        } */
+
+        #tipo1 .casa{
+            height:110vh;
+            justify-content: center;
+        }
+
+@media (min-width: 1920px){
+
+    #tipo1 .casa{
+    height: 100vh;
+    display: flex;
+align-items: center;
+justify-content: center;
+    }
+    
+}
